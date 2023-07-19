@@ -1,0 +1,32 @@
+<%- include('header')%>
+
+<main>
+  <form action="/delete" method="post" class="tasks-list">
+    <% if (tasks.length !== 0) { %>
+      <% tasks.forEach(task => { %>
+        <div class="tasks">
+          <div class="task">
+            <input type="checkbox" name="checkbox" />
+            <p><%= task.title %></p>
+          </div>
+          <button type="submit" name="taskID" value=<%= task.id %>
+            >
+            <i class="fa-solid fa-trash fa-sm" style="color: #ff6767"></i>
+          </button>
+        </div>
+      <% }) %>
+    <% } %>
+
+    <% if (tasks.length === 0) { %>
+     <p>No tasks in the list</p>
+    <% } %>
+  </form>
+
+  <form action="/" method="post" class="task-input">
+    <input type="text" name="task" placeholder="Enter your task" />
+    <button type="submit"><i class="fa-solid fa-plus" style="color: #ffffff"></i></button>
+  </form>
+</main>
+
+<%- include('footer')%>
+

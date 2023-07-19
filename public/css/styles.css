@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  height: 100vh;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e6e8e9 50%);
+}
+
+header {
+  padding: 1em;
+  background: #a683e3;
+  width: 320px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+  position: relative;
+}
+
+img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+
+  position: absolute;
+  top: -27px;
+  right: -29px;
+}
+
+main {
+  height: 440px;
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tasks-list {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  border-radius: 5px;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+}
+
+.tasks-list p {
+  text-align: center;
+}
+
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks button {
+  border: none;
+  outline: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+}
+
+.task p {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.task-input {
+  position: relative;
+}
+
+.task-input input {
+  display: inline-block;
+  font-family: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.task-input button {
+  position: absolute;
+  right: 1%;
+  top: 6%;
+
+  background: #a683e3;
+  outline: none;
+  padding: 0.7em 0.8em;
+  border: none;
+  border-radius: 5px;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+}
+
+i {
+  cursor: pointer;
+}
